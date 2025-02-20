@@ -2,6 +2,8 @@
 * PDAC(Pancreatic Ductal Adenocarcinoma)에서의 TRIM 계열 유전자 관련 연구를 진행 도중 Mouse의 데이터를 써도 될까? 라는 질문에서 출발한 프로젝트
 * Mouse 조직에서의 Trim 계열 유전자 발현 양상을 시각화한 heatmap을 그리기로 결정
 
+<br>
+
 * For our study related to PDAC(Pancreatic Ductal Adenocarcinoma), the question "Is it ok to use the data of mouse?" makes me start this project.
 * I draw Trim heatmap of mouse
 
@@ -12,6 +14,8 @@
 * 조직을 검색하면, R script를 다운받을 수 있음
 * R script를 실행하면, 로컬에 human 또는 mouse의 전체 DB가 설치됨 (한 번 설치되면, 해당 과정은 생략)
     * 검색했던 조직과 연관된 GEO sample ID를 추출해 count matrix를 구축하고 rds의 형태로 저장
+
+<br>
 
 * I use a public DB
 * ARCHS4 DB: [Link](https://maayanlab.cloud/archs4/)
@@ -28,6 +32,8 @@
 * 모든 조직을 합쳐서 하나의 matrix로 만든 다음, DESeq2를 활용해 normalization 진행 (deseq2.R)
 * 조직 당 여러 개 존재하는 sample 열을 median 계산을 통해 하나의 열로 바꿈 (median_deseq2_matrix.R)
 * Trim 계열 유전자 행만 추출 -> heatmap 생성 (final_heatmap.R)
+
+<br>
 
 * I get the count matrix of 44 normal tissues & 21 cancer tissues through ARCHS4
 * I extract some of sample IDs that can be representative of the tissue -> preprocessing per each tissue (normal_sample_extraction.R & cancer_sample_extraction.R)
